@@ -16,6 +16,7 @@ CREATE TABLE orders (
   orderID        INT(11)        NOT NULL   AUTO_INCREMENT,
   customerID     INT            NOT NULL,
   orderDate      DATETIME       NOT NULL,
+  orderSum       INT            NOT NULL,
   PRIMARY KEY (orderID)
 ) engine=innodb;
 
