@@ -1,7 +1,16 @@
 
 DROP DATABASE IF EXISTS prodDB;
 CREATE DATABASE prodDB;
-USE prodDB;  -- MySQL command
+
+use prodDB;
+drop user if exists 'cs2033user'@'localhost';
+
+create user 'cs2033user'@'localhost' identified by 'cs2033pass';
+grant all on prodDB.* to 'cs2033user'@'localhost';
+
+
+
+
 
 CREATE TABLE products (
   productID        INT(11)        NOT NULL   AUTO_INCREMENT,
